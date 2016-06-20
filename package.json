@@ -1,0 +1,19 @@
+{
+  "name": "screeps-ai",
+  "version": "0.0.1",
+  "description": "Madara's Screeps AI",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MadaraUchiha/screeps-ai.git"
+  },
+  "author": "Madara Uchiha <me@madara.ninja>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MadaraUchiha/screeps-ai/issues"
+  },
+  "homepage": "https://github.com/MadaraUchiha/screeps-ai#readme"
+}
