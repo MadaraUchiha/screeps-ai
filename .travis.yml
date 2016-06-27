@@ -8,3 +8,9 @@ before_script:
 script:
   - "npm install"
   - "gulp"
+
+deploy:
+  provider: script
+  script: "scripts/deploy.sh"
+  on:
+    branch: "stable"
