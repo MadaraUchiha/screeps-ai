@@ -1,16 +1,16 @@
 language: node_js
 node_js:
-  - "6"
-
+- '6'
 before_script:
-  - "npm install -g gulp"
-
+- npm install -g gulp
 script:
-  - "npm install"
-  - "gulp lint"
-
+- npm install
+- gulp lint
 deploy:
   provider: script
   script: "scripts/deploy.sh"
   on:
-    branch: "stable"
+    branch: stable
+before_install:
+- openssl aes-256-cbc -K $encrypted_0edb3429ae38_key -iv $encrypted_0edb3429ae38_iv
+  -in credentials.json.enc -out credentials.json -d
