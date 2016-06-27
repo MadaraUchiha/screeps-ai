@@ -7,10 +7,10 @@ before_script:
 
 script:
   - "npm install"
-  - "gulp"
+  - "gulp lint"
 
 deploy:
   provider: script
-  script: "scripts/deploy.sh"
+  script: "gulp commit"
   on:
     branch: "stable"
