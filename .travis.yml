@@ -4,13 +4,10 @@ node_js:
 before_script:
 - npm install -g gulp
 script:
-- npm install
-- gulp lint
-deploy:
-  provider: script
-  script: "scripts/deploy.sh"
-  on:
-    branch: stable
+- "npm install"
+- "gulp lint"
+- "if [[ $TRAVIS_BRANCH_$TRAVIS_PULL_REQUEST = master_false ]]; then gulp commit; fi"
+- "if [[ $TRAVIS_BRANCH_$TRAVIS_PULL_REQUEST = stable_false ]]; then gulp commit; fi"
 before_install:
-- openssl aes-256-cbc -K $encrypted_0edb3429ae38_key -iv $encrypted_0edb3429ae38_iv
-  -in credentials.json.enc -out credentials.json -d
+- "if [[ $TRAVIS_PULL_REQUEST = false ]]; then openssl aes-256-cbc -K $encrypted_0edb3429ae38_key -iv $encrypted_0edb3429ae38_iv
+  -in credentials.json.enc -out credentials.json -d; fi"
