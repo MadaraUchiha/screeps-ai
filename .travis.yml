@@ -6,6 +6,7 @@ before_script:
 script:
 - "npm install"
 - "gulp lint"
+- "echo Branch $TRAVIS_BRANCH and PR: $TRAVIS_PULL_REQUEST .:. $TRAVIS_BRANCH_$TRAVIS_PULL_REQUEST"
 - "if [[ $TRAVIS_BRANCH_$TRAVIS_PULL_REQUEST = master_false ]]; then gulp commit; fi"
 - "if [[ $TRAVIS_BRANCH_$TRAVIS_PULL_REQUEST = stable_false ]]; then gulp commit; fi"
 before_install:
