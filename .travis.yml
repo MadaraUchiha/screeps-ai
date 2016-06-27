@@ -11,6 +11,6 @@ script:
 
 deploy:
   provider: script
-  script: "gulp commit"
+  script: "scripts/deploy.sh"
   on:
     branch: "stable"
