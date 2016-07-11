@@ -9,6 +9,7 @@ module.exports = {
         const handler = new RoomHandler();
         for (const [name, room] of each(Game.rooms)) {
             handler.set(name, new MyRoom(room));
+            console.log(`I have ${handler.size()} rooms registered.`);
         }
     }
 };

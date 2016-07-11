@@ -25,4 +25,8 @@ module.exports = class RoomHandler {
         return this.rooms.get(name);
     }
 
+    size() {
+        return this.rooms.size;
+    }
+
 };
